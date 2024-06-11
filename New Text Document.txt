@@ -1,0 +1,120 @@
+1. How hashmap works internally?
+
+* diff b/w Hashcode() and equals()?
+
+2. Even/odd program not using mod(%) operator ? { ((n / 2) * 2 == n) } or { n%2 == 0 }.
+	Method 1: By using the bitwise (&) operator, a number can be checked if it is odd or even.
+
+		public class Main {
+
+				static int isEven(int n)
+				{
+					return (n & 1);
+				}
+
+
+			public static void main (String[] args)
+			{
+				Scanner sc = new Scanner(System.in);
+				int n;
+				System.out.println(“Enter the number :”);
+				n = sc.nextInt();
+				if(isEven(n) == 0)
+					System.out.print(“Even\n”);
+				else
+					System.out.print(“Odd\n”);
+			}
+		}
+	
+	Method 2: By multiplying and dividing the number by 2. Divide the number by 2 and multiply it by 2. If the result is the same as that 		  	  of the input, then it is an even number otherwise, it is an odd number.
+
+		public class Main {
+
+				static boolean isEven(int n)
+				{
+					return ((n / 2) * 2 == n);
+				}
+
+
+			public static void main (String[] args)
+			{
+				Scanner sc = new Scanner(System.in);
+				int n;
+				System.out.println(“Enter the number :”);
+				n = sc.nextInt();
+				if(isEven(n))
+					System.out.print(“Even\n”);
+				else
+					System.out.print(“Odd\n”);
+			}
+		}
+	Method 3: By switching temporary variable n times with the initial value of the variable being true.If the flag variable gets its 		  original value (which is true) back, then n is even. Else, n is false.
+		
+		public class Main {
+
+				static boolean isEven(int n)
+				{
+					boolean even_no = true;
+					for (int i=1; i <= n; i++)
+						even_no = !even_no;
+					return even_no;
+				}
+			public static void main (String[] args)
+			{
+				Scanner sc = new Scanner(System.in);
+				int n;
+				System.out.println(“Enter the number :”);
+				n = sc.nextInt();
+				if(isEven(n))
+					System.out.print(“Even\n”);
+				else
+					System.out.print(“Odd\n”);
+			}
+		}
+
+3. SpringBoot Exceptions/errors while building/running application?(port errors, bean errors etc..)
+
+4. If we define datamember as final, is there any use of static keyword for that datamember?
+
+5. what is robust and enterprise?
+
+6. If we use new keyword it will create in heap memory not in SCP? Yes/No.
+	yes
+7. Git commands?
+	git clone
+	git checkout
+	git branch
+	git add
+	git commit
+	git push
+	git pull
+	git status etc..
+
+Hands on questions :
+	1. what will you do while merging the code if you get conflits?
+	2. upcasting i.e, Parent obj1 = new Child();
+	3. downcasting i.e, Child obj2 = (Child) obj;
+
+TOPICS :
+
+1. Wrapper Classes.
+2. Binding in java.
+3. Upcasting & Downcasting.
+
+String :
+	1. Immuttable.
+	2. concatination(+).
+	3. 
+
+StringBuilder :
+
+	1. muttable
+	2. no concatination, having append method here.
+	3. Not synchronized & Not thread safe.
+	4. Faster than StringBuffer.
+
+StringBuffer : 
+	1. muttable 
+	2. no concatination, having append method here.
+	3. It is synchronized and thread safe.
+	4. StringBuffer consumes more memory than StringBuilder.
