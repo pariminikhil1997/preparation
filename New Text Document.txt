@@ -1,5 +1,3 @@
-git access token : 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
-
 1. How hashmap works internally?
 
 * diff b/w Hashcode() and equals()?
